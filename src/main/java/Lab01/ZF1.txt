@@ -1,0 +1,5 @@
+Java to obiektówka z lat 90, cross-platforming, bo mamy JVM, czyli wirtualną maszyne Javy
+
+Struktura działania
+source code -> Java Compiler -> bytecode-> JVM-> Program
+Java compiler wrzucą pliki .java na pliki .class poprzez bytecode

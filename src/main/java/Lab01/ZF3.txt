@@ -1,0 +1,45 @@
+WAŻNE:
+nazwa klasy musi być taka sama jak nazwa pliku z rozszerzeniem .java
+
+kod pliku HelloWorld.java:
+
+public class HelloWorld
+{
+	public static void main(String[]arg)
+	{
+		System.out.println("Hello World");
+	}
+
+}
+
+KOMENDY W CMD:
+
+Kompilacja kodu:
+javac HelloWorld.java
+
+Uruchomienie programu:
+java HelloWorld
+
+Modyfikacja pliku HelloWorld.java:
+public class HelloWorld
+{
+	public static void main(String[]arg)
+	{
+		System.out.println("Hello World!!!");
+	}
+
+}
+Ponownie trzeba wywowałać javac na plik HelloWorld.java,
+a potem uruchomić program przez java HelloWorld
+
+HelloWorld z parametrem:
+public class HelloWorld
+{
+	public static void main(String[]arg)
+	{
+		System.out.println("Hello World " + arg[0]);
+	}
+
+}
+Ponownie trzeba wywowałać javac na plik HelloWorld.java,
+a potem uruchomić program przez java HelloWorld test parametru (wyświetla parametr jaki został wpisany)

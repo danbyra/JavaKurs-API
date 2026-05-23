@@ -1,0 +1,7 @@
+Typy wartosciowe -> przechowayanie na stosie
+Typy referencyjne -> wartości są przechowywane na starcie, ale adres zmiennnej jest na stosie, czyli
+int[]tablica={1,2,3,4}
+tablica -> adres zmiennej jest na stosie (ma zapisaną referencje do sterty gdzie są wartości)
+{1,2,3,4} -> wartości tej zmiennej są przechowywane na stercie
+int[]tablica1=tablica -> tablica1 oraz tablica mają referencje do tego samego obszaru na stercie, czyli
+tablica1[0]=100, wtedy mamy {100,2,3,4}, a zmienna tablica oraz tablica1 mają te same wartości na stercie
