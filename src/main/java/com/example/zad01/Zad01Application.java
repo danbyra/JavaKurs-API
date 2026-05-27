@@ -1,5 +1,6 @@
 package com.example.zad01;
-import Lab01.FractionDB;
+import Lab02.FractionDB;
+import Lab02.TestPracownik;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -215,5 +216,4 @@ public class Zad01Application {
             }
         }
     }
-
 }
