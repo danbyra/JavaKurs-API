@@ -15,7 +15,7 @@ public class TestPracownik {
 
 
         for (Pracownik p : pracownicy) {
-            p.podniesPensje(5); // [cite: 8]
+            p.podniesPensje(5);
         }
 
         for (Pracownik p : pracownicy) {
