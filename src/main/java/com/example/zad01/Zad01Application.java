@@ -215,5 +215,7 @@ public class Zad01Application {
                 System.out.println(">>> BŁĄD: Wpisano nieprawidłowy format " + e.getMessage());
             }
         }
+        System.out.println("********************");
+        TestPracownik.main(args);
     }
 }
