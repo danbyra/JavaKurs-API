@@ -27,18 +27,22 @@ class Piosenka implements Comparable<Lab04.Piosenka>{
     /*KOD Z ZADANIA 2*/
     @Override
     public int compareTo(Lab04.Piosenka o) {
+
         return this.tytul.compareTo(o.tytul);
     }
+
     /*KOD Z ZADANIA 3*/
     public static class TytulComparator implements Comparator<Piosenka> {
         @Override
         public int compare(Piosenka o1, Piosenka o2) {
+
             return o1.getTytul().compareTo(o2.getTytul());
         }
     }
     public static class ArtystComparator implements Comparator<Piosenka> {
         @Override
         public int compare(Piosenka o1, Piosenka o2) {
+
             return o1.getArtysta().compareTo(o2.getArtysta());
         }
     }
@@ -53,6 +57,7 @@ class Piosenka implements Comparable<Lab04.Piosenka>{
     }
     @Override
     public int hashCode() {
-        return Objects.hash(tytul, artysta);
+        return Objects.hash(tytul.toLowerCase(), artysta.toLowerCase());
     }
+
 }
