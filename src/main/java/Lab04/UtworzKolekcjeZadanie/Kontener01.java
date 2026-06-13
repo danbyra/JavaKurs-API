@@ -3,16 +3,23 @@ package Lab04.UtworzKolekcjeZadanie;
 public class Kontener01 {
     private int[]tablica;
     public Kontener01(int rozmiar) {
-        tablica = new int[rozmiar];
+        if(rozmiar <0) throw  new IllegalArgumentException();
+        this.tablica = new int[rozmiar];
     }
+
     public int get(int index) {
         if(index <0 || index>tablica.length) throw new IndexOutOfBoundsException();
         return tablica[index];
     }
-    public  void setTablica(int index,int value) {
-        if(index<0)throw new  IndexOutOfBoundsException();
-        if(index>tablica.length)resize(index+1);
+    public  void set(int index,int value) {
+        if(index<0) throw new IndexOutOfBoundsException();
+        if(index>=tablica.length)
+            resize(index+1);
+
         tablica[index] = value;
+    }
+    public  int size() {
+        return this.tablica.length;
     }
     private void resize(int rozmiar) {
         int[]nowaTablica=new int[rozmiar];
