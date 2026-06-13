@@ -1,9 +1,9 @@
-package Lab04;
+package Lab04.JCF;
 
 import java.util.Comparator;
 import java.util.Objects;
 
-class Piosenka implements Comparable<Lab04.Piosenka>{
+class Piosenka implements Comparable<Piosenka>{
     private String tytul;
     private String artysta;
     private double ocena;
@@ -26,7 +26,7 @@ class Piosenka implements Comparable<Lab04.Piosenka>{
     }
     /*KOD Z ZADANIA 2*/
     @Override
-    public int compareTo(Lab04.Piosenka o) {
+    public int compareTo(Piosenka o) {
 
         return this.tytul.compareTo(o.tytul);
     }
@@ -43,7 +43,12 @@ class Piosenka implements Comparable<Lab04.Piosenka>{
         @Override
         public int compare(Piosenka o1, Piosenka o2) {
 
-            return o1.getArtysta().compareTo(o2.getArtysta());
+            int result=o1.getArtysta().compareTo(o2.getArtysta());
+            /*KOD Z ZADANIA 5*/
+            if(result==0){
+                result=o1.getTytul().compareTo(o2.getTytul());
+            }
+            return result;
         }
     }
     /*KOD Z ZADANIA 4*/

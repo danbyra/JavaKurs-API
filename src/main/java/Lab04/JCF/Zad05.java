@@ -1,19 +1,20 @@
-package Lab04;
+package Lab04.JCF;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
-public class Zad02 {
+public class Zad05 {
     public static void main(String[] args) {
-        String nazwaPliku="ListaPiosenek.txt";
+
+        String nazwaPliku="PełnaListaPiosenek.txt";
         List<Piosenka> tytuly=new ArrayList<>();
+
         try (Stream<String> stream = Files.lines(Paths.get(nazwaPliku))) {
             tytuly=stream
                     .filter(blank->!blank.trim().isEmpty())
@@ -30,11 +31,9 @@ public class Zad02 {
         catch (IOException e) {
             System.out.println("Błąd: odczyt pliku "+ e.getMessage());
         }
-        System.out.println("Piosenki według kolejności  pliku: ");
-        tytuly.forEach(System.out::println);
-        System.out.println();
-        //Collections.sort(tytuly);
-        System.out.println("Piosenki posortowane: ");
-        tytuly.forEach(System.out::println);
+        TreeSet<Piosenka>zbiorPiosenek=new TreeSet<>(new Piosenka.ArtystComparator());
+        zbiorPiosenek.addAll(tytuly);
+        System.out.println("Piosenki bez powtorzen -> Wykorzystanie TreeSet");
+        zbiorPiosenek.forEach(System.out::println);
     }
 }

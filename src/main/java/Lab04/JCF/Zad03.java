@@ -1,4 +1,4 @@
-package Lab04;
+package Lab04.JCF;
 
 import java.io.IOException;
 import java.nio.file.Files;

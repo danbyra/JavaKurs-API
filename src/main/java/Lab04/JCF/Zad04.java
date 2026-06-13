@@ -1,4 +1,4 @@
-package Lab04;
+package Lab04.JCF;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,8 +12,10 @@ import java.util.stream.Stream;
 
 public class Zad04 {
     public static void main(String[] args) {
+
         String nazwaPliku="PełnaListaPiosenek.txt";
         List<Piosenka> tytuly=new ArrayList<>();
+
         try (Stream<String> stream = Files.lines(Paths.get(nazwaPliku))) {
             tytuly=stream
                     .filter(blank->!blank.trim().isEmpty())
